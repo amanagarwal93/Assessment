@@ -1,13 +1,12 @@
 package com.example.assessment.adapter
 
-import Data
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.widget.AppCompatImageView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.assessment.utils.ItemClickListener
 import com.example.assessment.R
+import com.example.assessment.utils.ItemClickListener
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.gif_list_adapter.view.*
 

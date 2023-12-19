@@ -12,9 +12,9 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 For support, please feel free to contact me at https://www.linkedin.com/in/syedabsar */
 
 
-data class Analytics (
+data class Analytics(
 
-	@SerializedName("onload") val onload : Onload,
-	@SerializedName("onclick") val onclick : Onclick,
-	@SerializedName("onsent") val onsent : Onsent
+    @SerializedName("onload") val onload: Onload,
+    @SerializedName("onclick") val onclick: Onclick,
+    @SerializedName("onsent") val onsent: Onsent
 )

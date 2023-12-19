@@ -12,10 +12,10 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 For support, please feel free to contact me at https://www.linkedin.com/in/syedabsar */
 
 
-data class W_still (
+data class W_still(
 
-	@SerializedName("height") val height : Int,
-	@SerializedName("width") val width : Int,
-	@SerializedName("size") val size : Int,
-	@SerializedName("url") val url : String
+    @SerializedName("height") val height: Int,
+    @SerializedName("width") val width: Int,
+    @SerializedName("size") val size: Int,
+    @SerializedName("url") val url: String
 )

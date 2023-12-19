@@ -6,7 +6,6 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.assessment.retrofit.ApiInterface
 import com.example.assessment.retrofit.RetrofitClient
-import com.example.assessment.utils.API_KEY
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -21,7 +20,7 @@ class GifViewModel : ViewModel() {
     init {
         responseDataMutableLiveData = MutableLiveData()
         apiInterface = RetrofitClient.build()
-        call = apiInterface!!.getGif(API_KEY, 25)
+        call = apiInterface!!.getGif(BuildConfig.API_KEY, 25)
         loadGIF()
     }
 
@@ -33,7 +32,7 @@ class GifViewModel : ViewModel() {
         call?.enqueue(object : Callback<Data> {
             override fun onResponse(call: Call<Data>, response: Response<Data>) {
                 if (response.isSuccessful) {
-                    if(response.body() != null) {
+                    if (response.body() != null) {
                         responseDataMutableLiveData?.value = response.body()
                     }
                 }

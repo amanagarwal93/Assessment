@@ -10,17 +10,17 @@ class GIFActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_gif)
 
-        val gifFragment = GifFragment();
-        val url = intent?.getStringExtra("imageUrl");
+        val gifFragment = GifFragment()
+        val url = intent?.getStringExtra("imageUrl")
 
         val bundle = Bundle()
-        bundle.putString("imageUrl", url);
-        gifFragment.arguments = bundle;
+        bundle.putString("imageUrl", url)
+        gifFragment.arguments = bundle
 
         if (savedInstanceState == null) {
             supportFragmentManager.beginTransaction()
                 .add(R.id.frame_layout, gifFragment, "ImageFragment")
-                .commit();
+                .commit()
         }
     }
 }

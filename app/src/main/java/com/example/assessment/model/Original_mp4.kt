@@ -12,10 +12,10 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 For support, please feel free to contact me at https://www.linkedin.com/in/syedabsar */
 
 
-data class Original_mp4 (
+data class Original_mp4(
 
-	@SerializedName("height") val height : Int,
-	@SerializedName("width") val width : Int,
-	@SerializedName("mp4_size") val mp4_size : Int,
-	@SerializedName("mp4") val mp4 : String
+    @SerializedName("height") val height: Int,
+    @SerializedName("width") val width: Int,
+    @SerializedName("mp4_size") val mp4_size: Int,
+    @SerializedName("mp4") val mp4: String
 )

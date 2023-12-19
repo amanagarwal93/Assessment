@@ -1,7 +1,6 @@
 package com.example.assessment.retrofit
 
 import Data
-import com.example.assessment.utils.API_KEY
 import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Query

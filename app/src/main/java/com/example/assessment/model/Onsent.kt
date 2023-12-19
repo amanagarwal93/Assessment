@@ -12,7 +12,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 For support, please feel free to contact me at https://www.linkedin.com/in/syedabsar */
 
 
-data class Onsent (
+data class Onsent(
 
-	@SerializedName("url") val url : String
+    @SerializedName("url") val url: String
 )

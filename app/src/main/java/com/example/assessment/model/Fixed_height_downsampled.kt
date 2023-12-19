@@ -12,12 +12,12 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 For support, please feel free to contact me at https://www.linkedin.com/in/syedabsar */
 
 
-data class Fixed_height_downsampled (
+data class Fixed_height_downsampled(
 
-	@SerializedName("height") val height : Int,
-	@SerializedName("width") val width : Int,
-	@SerializedName("size") val size : Int,
-	@SerializedName("url") val url : String,
-	@SerializedName("webp_size") val webp_size : Int,
-	@SerializedName("webp") val webp : String
+    @SerializedName("height") val height: Int,
+    @SerializedName("width") val width: Int,
+    @SerializedName("size") val size: Int,
+    @SerializedName("url") val url: String,
+    @SerializedName("webp_size") val webp_size: Int,
+    @SerializedName("webp") val webp: String
 )
