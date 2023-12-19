@@ -42,7 +42,7 @@ class GIFAdapter(
 
     fun update(data: ArrayList<String>) {
         this.data = data
-        notifyDataSetChanged()
+//        notifyDataSetChanged()
     }
 
     class GIFViewHolder(view: View) : RecyclerView.ViewHolder(view) {
