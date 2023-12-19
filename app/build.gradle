@@ -3,6 +3,8 @@ plugins {
     id 'kotlin-android'
     id 'kotlin-android-extensions'
     id 'kotlin-kapt'
+    id 'com.google.firebase.appdistribution'
+    id 'com.google.gms.google-services'
 }
 
 android {
@@ -22,11 +24,27 @@ android {
     }
 
     buildTypes {
+        debug {
+            firebaseAppDistribution {
+                releaseNotes = "releaseNotes.txt"
+                testers = "aman.x.1@goindigo.in"
+                artifactPath = "/app/build/outputs/apk/debug/app-debug.apk"
+            }
+            debuggable true
+            minifyEnabled false
+        }
         release {
+            firebaseAppDistribution {
+                releaseNotes = "releaseNotes.txt"
+                testers = "aman.x.1@goindigo.in"
+            }
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            multiDexEnabled true
+            debuggable false
         }
     }
+
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
