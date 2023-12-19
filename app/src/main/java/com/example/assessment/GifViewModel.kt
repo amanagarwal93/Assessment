@@ -10,7 +10,6 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-
 class GifViewModel : ViewModel() {
 
     private var responseDataMutableLiveData: MutableLiveData<Data>? = null

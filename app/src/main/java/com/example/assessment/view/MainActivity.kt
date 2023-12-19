@@ -38,21 +38,22 @@ class MainActivity : AppCompatActivity(), ItemClickListener {
         recycler_view.setHasFixedSize(true)
         recycler_view.setItemViewCacheSize(30)
         recycler_view.layoutManager = GridLayoutManager(this, 3)
-        viewModel.getResponseDataMutableLiveData()?.observe(this, Observer {
-            Log.d(TAG, "data updated $it")
-            if (it != null) {
-                for (url in it.bitly_gif_url) {
-                    recyclerDataArrayList?.add(url.toString())
+        viewModel.getResponseDataMutableLiveData()?.observe(
+            this,
+            Observer {
+                Log.d(TAG, "data updated $it")
+                if (it != null) {
+                    for (url in it.bitly_gif_url) {
+                        recyclerDataArrayList?.add(url.toString())
+                    }
                 }
+                adapter =
+                    recyclerDataArrayList?.let { it1 -> GIFAdapter(it1, this) }!!
+                recycler_view.adapter = adapter
             }
-            adapter =
-                recyclerDataArrayList?.let { it1 -> GIFAdapter(it1, this) }!!
-            recycler_view.adapter = adapter
-        })
+        )
         //        recycler_view.isDrawingCacheEnabled = true
 //        recycler_view.drawingCacheQuality = View.DRAWING_CACHE_QUALITY_HIGH
-
-
     }
 
     override fun itemClick(url: String) {
