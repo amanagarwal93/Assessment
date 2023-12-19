@@ -14,7 +14,7 @@ jobs:
     permissions:
       contents: read
       packages: read
-      # To report GitHub Actions status checks
+      # To report GitHub Actions status check
       statuses: write
 
     steps:
