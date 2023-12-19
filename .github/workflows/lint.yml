@@ -5,7 +5,7 @@ on:  # yamllint disable-line rule:truthy
     branches: main
 
 jobs:
-  build:
+  lint:
     name: Lint
     runs-on: ubuntu-latest
 
@@ -25,3 +25,5 @@ jobs:
           DEFAULT_BRANCH: main
           # To report GitHub Actions status checks
           GITHUB_TOKEN: ${{ secrets.TOKEN }}
+
+
