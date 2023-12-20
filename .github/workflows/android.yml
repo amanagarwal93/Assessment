@@ -46,12 +46,12 @@ jobs:
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
       - name: Build with Gradle
-        run: ./gradlew build
-      - name: Upload QA Flavour APK to Firebase App Tester
+        run: ./gradlew assembleDebug
+      - name: Upload QA Flavour APK to Firebase App
         uses: wzieba/Firebase-Distribution-Github-Action@v1
         with:
           appId: ${{ secrets.APP_ID }}
           serviceCredentialsFileContent: ${{ secrets.CREDENTIAL_FILE_CONTENT }}
-          groups: qa-internal
+          groups: qa-testers
           releaseNotes: "releaseNotes.txt"
           file: app/build/outputs/apk/debug/app-debug.apk
