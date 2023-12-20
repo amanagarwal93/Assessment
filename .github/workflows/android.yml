@@ -25,7 +25,7 @@ jobs:
         uses: super-linter/super-linter@v5
         env:
           DEFAULT_BRANCH: main
-          FILTER_REGEX_EXCLUDE: '(\.gradle/|\.idea/|\.github/|\build|\gradle|\gradlew|\gradle.properties|google_services.json)'
+          FILTER_REGEX_EXCLUDE: '(\.gradle/|\.idea/|\.github/|\build|\gradle|\gradlew|\gradle.properties|\app\google_services.json)'
 
           # To report GitHub Actions status checks
           GITHUB_TOKEN: ${{ secrets.TOKEN }}
